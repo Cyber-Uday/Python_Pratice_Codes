@@ -19,4 +19,5 @@ class CDLL:
             n.next
             self.start=n
         else:
-            
+            n=self.start
+            self.start=n

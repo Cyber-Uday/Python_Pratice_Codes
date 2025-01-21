@@ -3,7 +3,7 @@
 #one is data(item) and one is next as pointer address>> 
 
 class Node:
-                        #we create here local variable which is item and next for node initlize
+                #we create here local variable which is item and next for node initlize
     def __init__(self,item=None,next=None):
         #now we need to create instance variables object 
         self.item=item
@@ -13,17 +13,16 @@ class SLL:
     def __init__(self,start=None):
         self.start=start
     
-    def array(self,data):
-        self.data=data
-        print(f"This is data :> {data}")
-        
     def is_empty(self):
         return self.start==None # this way we can check the empty or not >> 
     #  or return True
 
     #Question 4th is define method insert_at_start to insert an elemenet at starting 
     def insert_at_start(self,data):
-        n=Node(data,self.start)
+        if self.is_empty():
+            n=Node(data,self.start)
+        else:
+            n=Node(data,self.start)
         self.start=n
         
     #question 5th is define method insert_at_last to insert an element at last >> 
@@ -94,19 +93,18 @@ class SLL:
                             temp.next=temp.next.next 
                             break
                         temp=temp.next
-                
-            
-            
-            
+                        
 #driver code:: 
 MyList=SLL()
-MyList.insert_at_start(20)
-MyList.insert_at_start(50)
 MyList.insert_at_start(10)
-MyList.insert_at_last(30) 
-MyList.insert_after(MyList.search(20),25)
+MyList.insert_at_start(20)
+MyList.insert_after(MyList.search(20),5)
+MyList.insert_at_last(15)
 MyList.print_list()
+
+#here we done..! all inser things now going for check delete// got 20 5 10 15
 print()
-MyList.delete_last()
-MyList.delete_last()
-MyList.print_list()
+MyList.delete_frist()   #20 del
+MyList.delete_item(5)    #5 delete
+MyList.delete_last()    #15 delete
+MyList.print_list()#only 10 left

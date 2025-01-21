@@ -2,12 +2,10 @@
 
 class Stud:
     def __init__(self) -> None:
-        print("HELO THIS WILL CALLED AUTOMATICALLY..!")
+        print("HELO THIS Init Method WILL CALLED AUTOMATICALLY..!")
         
-    def add(self):
-        a=10
-        b=2
+    def add(self,a,b):
         print("THE ADDITION IS:> ",(a+b))
 
 obj=Stud()
-obj.add()
+obj.add(5,12)

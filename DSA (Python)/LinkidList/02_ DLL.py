@@ -122,8 +122,6 @@ class DLLIterator:
         data=self.current.item
         self.current=self.current.next
         return data 
-        
-
 MyList=DLL()
 MyList.insert_at_last(30)
 MyList.insert_at_start(20)

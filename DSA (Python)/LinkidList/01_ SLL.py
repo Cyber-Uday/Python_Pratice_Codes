@@ -36,6 +36,7 @@ class SLL:
             temp.next=n
         else:
             self.start=n 
+        #here new things will be added
             
     #question 6th Is define a method search() to find the node with sepcific element value
     def search(self,data):
